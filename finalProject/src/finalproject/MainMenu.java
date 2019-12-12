@@ -10,12 +10,13 @@ package finalproject;
  * @author user
  */
 public class MainMenu extends javax.swing.JFrame {
-
+    private Battle otherWindow;
     /**
      * Creates new form NewJFrame
      */
     public MainMenu() {
         initComponents();
+        setResizable(false);
     }
 
     /**
@@ -30,9 +31,11 @@ public class MainMenu extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         btnStart = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        btnBattle = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         jButton2.setText("jButton2");
 
@@ -51,22 +54,37 @@ public class MainMenu extends javax.swing.JFrame {
         });
         jLayeredPane1.add(btnStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
+        jButton4.setText("Credits");
+        jLayeredPane1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        jButton5.setText("Controls");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jLayeredPane1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 110, -1));
+
+        btnBattle.setText("Battle!");
+        btnBattle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBattleActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnBattle, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 120, 130));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/ReliableInsidiousBasenji-size_restricted.gif"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 430));
+
         jButton3.setText("Controls");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jLayeredPane1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
-
-        jButton4.setText("Credits");
-        jLayeredPane1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
-
-        getContentPane().add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 110, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/ReliableInsidiousBasenji-size_restricted.gif"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 430));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,6 +96,17 @@ public class MainMenu extends javax.swing.JFrame {
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         Main f = new Main();
     }//GEN-LAST:event_btnStartActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void btnBattleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBattleActionPerformed
+        if(otherWindow == null){
+                    otherWindow = new Battle(this);
+                }
+                otherWindow.setVisible(true);
+    }//GEN-LAST:event_btnBattleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,10 +147,12 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBattle;
     private javax.swing.JButton btnStart;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     // End of variables declaration//GEN-END:variables

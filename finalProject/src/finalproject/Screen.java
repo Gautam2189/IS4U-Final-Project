@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package finalproject;
 
 import java.awt.Graphics;
@@ -16,7 +11,9 @@ import javax.swing.ImageIcon;
 import javax.swing.Timer;
 
 public class Screen extends JPanel implements ActionListener, KeyListener {
-
+    
+    
+    
     Timer t = new Timer(10, this);
 
     //Creates a new player located at 0,0 with a size of 10 and a speed of 0.
@@ -36,7 +33,9 @@ public class Screen extends JPanel implements ActionListener, KeyListener {
 
         //Runs the player "tick", moving the player.
         p.move();
-
+        
+        
+        
         //Repaints the screen.
         repaint();
         
@@ -48,8 +47,6 @@ public class Screen extends JPanel implements ActionListener, KeyListener {
     public void paint(Graphics g) {
 
         g.clearRect(0, 0, getWidth(), getHeight());
-        
-
         
         p.draw(g);
 

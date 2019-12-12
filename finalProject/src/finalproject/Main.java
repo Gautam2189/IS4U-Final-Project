@@ -6,11 +6,13 @@ Top down 2D game.
 package finalproject;
 
 import java.awt.GridLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 
 public class Main extends JFrame {
-
+    
     public Main(){
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,9 +27,9 @@ public class Main extends JFrame {
         setResizable(false);
         
         init();
-
         
     }
+
     
     public void init(){
  
@@ -41,11 +43,15 @@ public class Main extends JFrame {
         
         //Makes the screen visible.
         setVisible(true);
+        
+        
     }
     
     public static void main(String[] args) {
-        
         Main f = new Main();
+        
+        
     }
     
 }
+

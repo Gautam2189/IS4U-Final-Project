@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package finalproject;
 
 import java.awt.Rectangle;
@@ -34,6 +29,7 @@ public class Player extends JFrame {
         playerY = playerYInput;
 
         setBounds(playerX, playerY, width, height);
+        
         this.speedX = dx;
         this.speedY = dy;
 
@@ -110,22 +106,22 @@ public class Player extends JFrame {
 
         if (direction.equals("left")) {
 
-            setSpeedX(-3);
+            setSpeedX(-2);
             setSpeedY(0);
 
         } else if (direction.equals("right")) {
 
-            setSpeedX(3);
+            setSpeedX(2);
             setSpeedY(0);
 
         } else if (direction.equals("up")) {
 
-            setSpeedY(-3);
+            setSpeedY(-2);
             setSpeedX(0);
 
         } else if (direction.equals("down")) {
 
-            setSpeedY(3);
+            setSpeedY(2);
             setSpeedX(0);
         } else {
 
